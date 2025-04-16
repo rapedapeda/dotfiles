@@ -1,0 +1,23 @@
+# /home/ramon/.config/tmuxinator/dash.yml
+
+name: dash
+root: .
+
+windows:
+  - editor:
+      # Synchronize all panes of this window, can be enabled before or after the pane commands run.
+      # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
+      # synchronize: after
+      panes:
+        - editor:
+            - source venv/bin/activate
+            - nvim .
+  - console:
+      layout: even-horizontal
+      panes:
+        - app:
+            - source venv/bin/activate
+            - python dashboard.py
+        - logger:
+            - source venv/bin/activate
+            - tail -f debug.log
