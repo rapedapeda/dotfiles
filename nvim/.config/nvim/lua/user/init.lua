@@ -1,4 +1,5 @@
 require("user.keymaps")
 require("user.lazy")
 require("user.set")
+require("user.autocmds")
 --vim.diagnostic.config({ virtual_text = true })

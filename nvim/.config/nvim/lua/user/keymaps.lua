@@ -12,9 +12,7 @@ map("n", "<C-l>", "<C-w>l", { desc = "Go to Right Window" })
 map("n", "<S-h>", "<cmd>bprevious<cr>", { desc = "Prev Buffer" })
 map("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next Buffer" })
 
--- Close buffers
-map("n", "<leader>bd", "<cmd>bd<cr>", { desc = "Close Buffer" })
-map("n", "<leader>bo", "<cmd>%bd|e#|bd#<cr>", { desc = "Close Other Buffers" })
+-- Buffer closing through mini-bufremove plugin
 
 -- LazyGit open (vereist dat 'lazygit' geïnstalleerd is)
 map("n", "<leader>gg", function()
