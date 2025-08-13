@@ -14,7 +14,3 @@ map("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next Buffer" })
 
 -- Buffer closing through mini-bufremove plugin
 
--- LazyGit open (vereist dat 'lazygit' geïnstalleerd is)
-map("n", "<leader>gg", function()
-  vim.cmd("LazyGit")
-end, { desc = "Open LazyGit" })
