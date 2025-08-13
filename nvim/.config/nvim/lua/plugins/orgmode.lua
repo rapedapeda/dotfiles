@@ -8,11 +8,12 @@ return {
   event = "VeryLazy",
   config = function()
     require("orgmode").setup({
-      win_split_mode = '25split',
+      win_split_mode = 'float',
       org_agenda_files = "~/Notes/**/*.org",
       org_default_notes_file = "~/Notes/inbox.org",
       org_todo_keywords = {'TODO(t)', 'NEXT(n)', 'PROG(p)', 'URG(u)', '|', 'DONE(d)'},
       org_deadline_warning_days = 3,
+      org_agenda_todo_ignore_scheduled = 'future',
       org_agenda_span = 'day',
       org_agenda_start_on_weekday = 1,
       org_agenda_custom_commands = {
@@ -23,6 +24,7 @@ return {
             type = 'agenda',
             org_agenda_span = 'day', 
             org_agenda_overriding_header = 'Agenda with daily todos',
+            match = 'TODO="TODO|URG|PROG|NEXT"',
           },
           {
             type = 'tags_todo',
