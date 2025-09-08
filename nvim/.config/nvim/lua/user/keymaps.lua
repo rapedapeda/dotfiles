@@ -14,3 +14,8 @@ map("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next Buffer" })
 
 -- Buffer closing through mini-bufremove plugin
 
+-- Org mode sorting
+map('n', '<leader>os', function()
+    require('user.org_sort').sort_current_buffer()
+end, { desc = 'Sort org tasks' })
+
