@@ -16,6 +16,43 @@ return {
       org_agenda_todo_ignore_scheduled = 'future',
       org_agenda_span = 'day',
       org_agenda_start_on_weekday = 1,
+      org_capture_templates = {
+        t = {
+          description = 'Task',
+          template = '* TODO %?\n  %U',
+          target = '~/Notes/inbox.org'
+        },
+        m = {
+          description = 'Meeting',
+          template = '* Meeting notes: %^{Meeting title}\n  %^{Date}t\n  ** Attendees: %^{Attendees}\n  ** Notes:\n  %?',
+          target = '~/Notes/inbox.org'
+        },
+        i = {
+          description = 'Idea',
+          template = '* TODO Project idea: %?\n  %U',
+          target = '~/Notes/inbox.org'
+        },
+        d = {
+          description = 'Datateam',
+          template = '* TODO %?\n  %U',
+          target = '~/Notes/areas/datateam.org'
+        },
+        a = {
+          description = 'Acquisition',
+          template = '* TODO %?\n  %U',
+          target = '~/Notes/areas/acquisitie.org'
+        },
+        o = {
+          description = 'Maintenance',
+          template = '* TODO %?\n  %U',
+          target = '~/Notes/areas/onderhoud.org'
+        },
+        p = {
+          description = 'PVT',
+          template = '* TODO %?\n  %U',
+          target = '~/Notes/areas/pvt.org'
+        }
+     },
       org_agenda_custom_commands = {
       n = {
         description = 'Agenda with daily todos',
