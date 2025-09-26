@@ -24,6 +24,7 @@ default_border pixel 2
 # Set inner/outer gaps
 gaps inner 12
 gaps outer 6
+gaps top 30
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
