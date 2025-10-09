@@ -276,6 +276,7 @@ for_window [class="Xsane" instance="xsane"] floating enable
 for_window [class="Pavucontrol" instance="pavucontrol"] floating enable
 for_window [class="qt5ct" instance="qt5ct"] floating enable
 for_window [class="Blueberry.py" instance="blueberry.py"] floating enable
+for_window [class="Bluetui"] floating enable, resize set 900 1100, move position center
 for_window [class="Bluetooth-sendto" instance="bluetooth-sendto"] floating enable
 for_window [class="Pamac-manager"] floating enable
 for_window [window_role="About"] floating enable
@@ -316,7 +317,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 ## rofi bindings fancy application menu ($mod+d /F9 optional disabled)
 
 #bindsym $mod+d exec ~/.config/rofi/launchers/type-2/launcher.sh
-bindsym $mod+d exec rofi -modi drun -show drun \
+bindsym $mod+d exec rofi -show drun \
 #		-config ~/.config/rofi/rofidmenu.rasi
 
 #bindsym F9 exec rofi -modi drun -show drun \
