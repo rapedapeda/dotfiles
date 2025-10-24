@@ -6,3 +6,7 @@ import = [
 [font.normal]
 family="Hack Nerd Font"
 
+[window]
+padding = {x = 10, y = 10 }
+dynamic_padding = true
+decorations = "None"
