@@ -3,12 +3,6 @@ import = [
     "themes/catppuccin-latte.toml"
 ]
 
-[window]
-decorations = "None"
-startup_mode = "Fullscreen"
-
 [font.normal]
 family="Hack Nerd Font"
 
-[terminal]
-shell = {program = "debian"}
