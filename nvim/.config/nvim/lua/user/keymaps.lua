@@ -14,6 +14,11 @@ map("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next Buffer" })
 
 -- Buffer closing through mini-bufremove plugin
 
+-- Telescope
+map("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Find Files" })
+map("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "Live Grep" })
+map("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Buffers" })
+
 -- Org mode sorting
 map('n', '<leader>os', function()
     require('user.org_sort').sort_current_buffer()

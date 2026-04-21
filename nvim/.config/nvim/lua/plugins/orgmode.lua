@@ -3,12 +3,20 @@ return {
   dependencies = {
     'nvim-telescope/telescope.nvim',
     'nvim-orgmode/telescope-orgmode.nvim',
-    'nvim-orgmode/org-bullets.nvim',
-    'Saghen/blink.cmp'},
+    'Saghen/blink.cmp',
+  },
   event = "VeryLazy",
   config = function()
+    vim.api.nvim_create_autocmd('FileType', {
+      pattern = 'org',
+      callback = function()
+        vim.opt_local.conceallevel = 2
+      end,
+    })
+
     require("orgmode").setup({
       win_split_mode = 'float',
+      org_hide_leading_stars = true,
       org_agenda_files = "~/Notes/**/*.org",
       org_default_notes_file = "~/Notes/inbox.org",
       org_todo_keywords = {'TODO(t)', 'NEXT(n)', 'PROG(p)', 'URG(u)', '|', 'DONE(d)'},
@@ -52,53 +60,40 @@ return {
           template = '* TODO %?\n  %U',
           target = '~/Notes/areas/pvt.org'
         }
-     },
-      org_agenda_custom_commands = {
-      n = {
-        description = 'Agenda with daily todos',
-        types = {
-          {
-            type = 'agenda',
-            org_agenda_span = 'day', 
-            org_agenda_overriding_header = 'Agenda with daily todos',
-            match = 'TODO="TODO|URG|PROG|NEXT"',
-          },
-          {
-            type = 'tags_todo',
-            match = 'TODO="URG"',
-            org_agenda_overriding_header = 'Urgent',
-          },
-          {
-            type = 'tags_todo',
-            match = 'TODO="PROG"',
-            org_agenda_overriding_header = 'In progress',
-          },
-          {
-            type = 'tags_todo',
-            match = 'TODO="NEXT"',
-            org_agenda_overriding_header = 'Next up',
-          },
-
-        }
-
-      }
-
-      }
-    })
-    require('org-bullets').setup()
-    require('blink.cmp').setup({
-      sources = {
-        per_filetype = {
-          org = {'orgmode'}
-        },
-        providers = {
-          orgmode = {
-            name = 'Orgmode',
-            module = 'orgmode.org.autocompletion.blink',
-            fallbacks = { 'buffer' },
-          },
+      },
+      mappings = {
+        org = {
+          org_toggle_checkbox = '<leader>of',
         },
       },
+      org_agenda_custom_commands = {
+        n = {
+          description = 'Agenda with daily todos',
+          types = {
+            {
+              type = 'agenda',
+              org_agenda_span = 'day',
+              org_agenda_overriding_header = 'Agenda with daily todos',
+              match = 'TODO="TODO|URG|PROG|NEXT"',
+            },
+            {
+              type = 'tags_todo',
+              match = 'TODO="URG"',
+              org_agenda_overriding_header = 'Urgent',
+            },
+            {
+              type = 'tags_todo',
+              match = 'TODO="PROG"',
+              org_agenda_overriding_header = 'In progress',
+            },
+            {
+              type = 'tags_todo',
+              match = 'TODO="NEXT"',
+              org_agenda_overriding_header = 'Next up',
+            },
+          }
+        }
+      }
     })
 
     require('telescope').setup()
