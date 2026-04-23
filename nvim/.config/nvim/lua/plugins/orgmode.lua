@@ -17,8 +17,8 @@ return {
     require("orgmode").setup({
       win_split_mode = 'float',
       org_hide_leading_stars = true,
-      org_agenda_files = "~/Notes/**/*.org",
-      org_default_notes_file = "~/Notes/inbox.org",
+      org_agenda_files = "~/notes/**/*.org",
+      org_default_notes_file = "~/notes/inbox.org",
       org_todo_keywords = {'TODO(t)', 'NEXT(n)', 'PROG(p)', 'URG(u)', '|', 'DONE(d)'},
       org_deadline_warning_days = 3,
       org_agenda_todo_ignore_scheduled = 'future',
@@ -28,37 +28,37 @@ return {
         t = {
           description = 'Task',
           template = '* TODO %?\n  %U',
-          target = '~/Notes/inbox.org'
+          target = '~/notes/inbox.org'
         },
         m = {
           description = 'Meeting',
           template = '* Meeting notes: %^{Meeting title}\n  %^{Date}t\n  ** Attendees: %^{Attendees}\n  ** Notes:\n  %?',
-          target = '~/Notes/inbox.org'
+          target = '~/notes/inbox.org'
         },
         i = {
           description = 'Idea',
           template = '* TODO Project idea: %?\n  %U',
-          target = '~/Notes/inbox.org'
+          target = '~/notes/inbox.org'
         },
         d = {
           description = 'Datateam',
           template = '* TODO %?\n  %U',
-          target = '~/Notes/areas/datateam.org'
+          target = '~/notes/areas/datateam.org'
         },
         a = {
           description = 'Acquisition',
           template = '* TODO %?\n  %U',
-          target = '~/Notes/areas/acquisitie.org'
+          target = '~/notes/areas/acquisitie.org'
         },
         o = {
           description = 'Maintenance',
           template = '* TODO %?\n  %U',
-          target = '~/Notes/areas/onderhoud.org'
+          target = '~/notes/areas/onderhoud.org'
         },
         p = {
           description = 'PVT',
           template = '* TODO %?\n  %U',
-          target = '~/Notes/areas/pvt.org'
+          target = '~/notes/areas/pvt.org'
         }
       },
       mappings = {
