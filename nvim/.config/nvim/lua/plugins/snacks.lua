@@ -5,14 +5,22 @@ return{
   ---@type snacks.Config
   opts = {
     lazygit = { enabled = true },
+    terminal = {
+      enabled = true,
+      win = { style = "float" },
+    },
   },
   keys = {
     {
       "<leader>gg",
-      function()
-        require("snacks.lazygit").open()
-      end,
+      function() Snacks.lazygit.open() end,
       desc = "Toggle Lazygit",
+    },
+    {
+      "<C-\\>",
+      function() Snacks.terminal.toggle() end,
+      mode = { "n", "t" },
+      desc = "Toggle Terminal",
     },
   },
 }

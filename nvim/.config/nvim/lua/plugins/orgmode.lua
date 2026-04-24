@@ -24,6 +24,7 @@ return {
       org_agenda_todo_ignore_scheduled = 'future',
       org_agenda_span = 'day',
       org_agenda_start_on_weekday = 1,
+      org_archive_location = '~/notes/archive/%s::',
       org_capture_templates = {
         t = {
           description = 'Task',
