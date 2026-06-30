@@ -19,7 +19,7 @@ return {
       org_hide_leading_stars = true,
       org_agenda_files = "~/notes/**/*.org",
       org_default_notes_file = "~/notes/inbox.org",
-      org_todo_keywords = {'TODO(t)', 'NEXT(n)', 'PROG(p)', 'URG(u)', '|', 'DONE(d)'},
+      org_todo_keywords = {'TODO(t)', 'NEXT(n)', 'PROG(p)', 'FOLLOW(f)', '|', 'DONE(d)'},
       org_deadline_warning_days = 3,
       org_agenda_todo_ignore_scheduled = 'future',
       org_agenda_span = 'day',
@@ -36,9 +36,9 @@ return {
           template = '* Meeting notes: %^{Meeting title}\n  %^{Date}t\n  ** Attendees: %^{Attendees}\n  ** Notes:\n  %?',
           target = '~/notes/inbox.org'
         },
-        i = {
-          description = 'Idea',
-          template = '* TODO Project idea: %?\n  %U',
+        f = {
+          description = 'Follow',
+          template = '* TODO %?\n  %U',
           target = '~/notes/inbox.org'
         },
         d = {
@@ -75,12 +75,12 @@ return {
               type = 'agenda',
               org_agenda_span = 'day',
               org_agenda_overriding_header = 'Agenda with daily todos',
-              match = 'TODO="TODO|URG|PROG|NEXT"',
+              match = 'TODO="TODO|FOLLOW|PROG|NEXT"',
             },
             {
               type = 'tags_todo',
-              match = 'TODO="URG"',
-              org_agenda_overriding_header = 'Urgent',
+              match = 'TODO="FOLLOW"',
+              org_agenda_overriding_header = 'Follow',
             },
             {
               type = 'tags_todo',

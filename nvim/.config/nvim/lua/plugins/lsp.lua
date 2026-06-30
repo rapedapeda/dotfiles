@@ -22,6 +22,7 @@ return {
           },
         },
       })
+      vim.lsp.enable('lua_ls')
 
       vim.lsp.config('pyright', {
         capabilities = capabilities,
@@ -41,6 +42,7 @@ return {
           },
         },
       })
+      vim.lsp.enable('pyright')
 
       require('mason-lspconfig').setup({
         handlers = {
@@ -48,8 +50,6 @@ return {
             vim.lsp.config(server_name, { capabilities = capabilities })
             vim.lsp.enable(server_name)
           end,
-          lua_ls = function() end,
-          pyright = function() end,
         },
       })
 
