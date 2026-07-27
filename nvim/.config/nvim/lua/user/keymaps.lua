@@ -33,3 +33,8 @@ map('n', '<leader>os', function()
     require('user.org_sort').sort_current_buffer()
 end, { desc = 'Sort org tasks' })
 
+-- Move current project/area file into archive/
+map('n', '<leader>om', function()
+    require('user.org_archive').archive_current_file()
+end, { desc = 'Move to archive' })
+
