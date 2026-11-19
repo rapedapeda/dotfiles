@@ -97,7 +97,12 @@
         "id": "Notities",
         "matching_strategy": "DoesNotStartWith"
       }
-    ]
+    ],
+    {
+      "kind": "Class",
+      "id": "CabinetWClass",
+      "matching_strategy": "Equals"
+    }
   ],
   "monitors": [
     {

@@ -47,6 +47,7 @@ $s.WindowStyle = 7; $s.Save()
   The main window and pop-outs are otherwise identical (same class/style).
 - Theme: Catppuccin Latte borders (lavender focused, overlay0 unfocused),
   no unfocused transparency (border is enough), padding 4px.
+- Explorer windows (class `CabinetWClass`) always float.
 - komorebi-bar is not used.
 
 ## Gotchas
