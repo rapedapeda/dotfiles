@@ -18,8 +18,7 @@
     "floating_border": "Teal",
     "unfocused_border": "Overlay0"
   },
-  "transparency": true,
-  "transparency_alpha": 230,
+  "transparency": false,
   "float_rule_placement": "Center",
   "floating_applications": [
     [

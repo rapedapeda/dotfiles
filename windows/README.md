@@ -46,7 +46,7 @@ $s.WindowStyle = 7; $s.Save()
   start with a main-window name (`E-mail`, `Postvak IN`, `Agenda`, ...).
   The main window and pop-outs are otherwise identical (same class/style).
 - Theme: Catppuccin Latte borders (lavender focused, overlay0 unfocused),
-  unfocused windows slightly transparent (alpha 230), padding 4px.
+  no unfocused transparency (border is enough), padding 4px.
 - komorebi-bar is not used.
 
 ## Gotchas
@@ -67,4 +67,5 @@ $s.WindowStyle = 7; $s.Save()
 `alt+shift+enter` promote to master · `alt+1..5` workspace ·
 `alt+shift+1..5` send window to workspace · `alt+f` monocle ·
 `alt+shift+space` float · `alt+s` cycle layout · `alt+=`/`alt+-` resize ·
-`alt+shift+c` reload komorebi · `alt+o` reload whkd
+`alt+shift+c` reload komorebi · `alt+o` reload whkd ·
+`alt+d` launcher (PowerToys, not whkd)
