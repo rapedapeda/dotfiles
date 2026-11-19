@@ -1,0 +1,141 @@
+{
+  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.41/schema.json",
+  "app_specific_configuration_path": "$Env:USERPROFILE/applications.json",
+  "window_hiding_behaviour": "Cloak",
+  "cross_monitor_move_behaviour": "Insert",
+  "default_workspace_padding": 4,
+  "default_container_padding": 4,
+  "border": true,
+  "border_width": 3,
+  "border_offset": -1,
+  "border_style": "Rounded",
+  "theme": {
+    "palette": "Catppuccin",
+    "name": "Latte",
+    "single_border": "Lavender",
+    "stack_border": "Peach",
+    "monocle_border": "Mauve",
+    "floating_border": "Teal",
+    "unfocused_border": "Overlay0"
+  },
+  "transparency": true,
+  "transparency_alpha": 230,
+  "float_rule_placement": "Center",
+  "floating_applications": [
+    [
+      {
+        "kind": "Exe",
+        "id": "olk.exe",
+        "matching_strategy": "Equals"
+      },
+      {
+        "kind": "Title",
+        "id": "Outlook",
+        "matching_strategy": "DoesNotStartWith"
+      },
+      {
+        "kind": "Title",
+        "id": "E-mail",
+        "matching_strategy": "DoesNotStartWith"
+      },
+      {
+        "kind": "Title",
+        "id": "Postvak IN",
+        "matching_strategy": "DoesNotStartWith"
+      },
+      {
+        "kind": "Title",
+        "id": "Agenda",
+        "matching_strategy": "DoesNotStartWith"
+      },
+      {
+        "kind": "Title",
+        "id": "Personen",
+        "matching_strategy": "DoesNotStartWith"
+      },
+      {
+        "kind": "Title",
+        "id": "Contactpersonen",
+        "matching_strategy": "DoesNotStartWith"
+      },
+      {
+        "kind": "Title",
+        "id": "To Do",
+        "matching_strategy": "DoesNotStartWith"
+      },
+      {
+        "kind": "Title",
+        "id": "Taken",
+        "matching_strategy": "DoesNotStartWith"
+      },
+      {
+        "kind": "Title",
+        "id": "Verzonden items",
+        "matching_strategy": "DoesNotStartWith"
+      },
+      {
+        "kind": "Title",
+        "id": "Concepten",
+        "matching_strategy": "DoesNotStartWith"
+      },
+      {
+        "kind": "Title",
+        "id": "Archief",
+        "matching_strategy": "DoesNotStartWith"
+      },
+      {
+        "kind": "Title",
+        "id": "Verwijderde items",
+        "matching_strategy": "DoesNotStartWith"
+      },
+      {
+        "kind": "Title",
+        "id": "Ongewenste e-mail",
+        "matching_strategy": "DoesNotStartWith"
+      },
+      {
+        "kind": "Title",
+        "id": "Notities",
+        "matching_strategy": "DoesNotStartWith"
+      }
+    ]
+  ],
+  "monitors": [
+    {
+      "workspaces": [
+        {
+          "name": "1",
+          "layout": "VerticalStack",
+          "initial_workspace_rules": [
+            {
+              "kind": "Exe",
+              "id": "olk.exe",
+              "matching_strategy": "Equals"
+            },
+            {
+              "kind": "Exe",
+              "id": "ms-teams.exe",
+              "matching_strategy": "Equals"
+            }
+          ]
+        },
+        {
+          "name": "2",
+          "layout": "VerticalStack"
+        },
+        {
+          "name": "3",
+          "layout": "VerticalStack"
+        },
+        {
+          "name": "4",
+          "layout": "VerticalStack"
+        },
+        {
+          "name": "5",
+          "layout": "VerticalStack"
+        }
+      ]
+    }
+  ]
+}
