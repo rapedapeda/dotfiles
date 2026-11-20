@@ -25,9 +25,9 @@ if (-not (Get-Process komorebi -ErrorAction SilentlyContinue)) {
 }
 Wait-Komorebi
 
-# Focus follows mouse (masir, komorebi-aware)
-if (-not (Get-Process masir -ErrorAction SilentlyContinue)) {
-    Start-Process "C:\Program Files\masir\bin\masir.exe" -WindowStyle Hidden
+# Launcher (PowerToys Command Palette, alt+d)
+if (-not (Get-Process Microsoft.CmdPal.UI -ErrorAction SilentlyContinue)) {
+    Start-Process "shell:AppsFolder\Microsoft.CommandPalette_8wekyb3d8bbwe!App"
 }
 
 # ws1: Outlook + Teams (die gaan via initial_workspace_rules vanzelf naar 1), Alacritty

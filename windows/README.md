@@ -1,8 +1,8 @@
 # Windows (work laptop): komorebi + whkd
 
 i3-style tiling on Windows with [komorebi](https://github.com/LGUG2Z/komorebi)
-(v0.1.41), hotkeys via [whkd](https://github.com/LGUG2Z/whkd) and
-focus-follows-mouse via [masir](https://github.com/LGUG2Z/masir).
+(v0.1.41) and hotkeys via [whkd](https://github.com/LGUG2Z/whkd).
+No focus-follows-mouse (tried masir, too distracting).
 Not a stow package: Windows can't read the configs from the WSL filesystem
 at boot, so `sync.sh` copies them into `%USERPROFILE%`.
 
@@ -21,7 +21,7 @@ at boot, so `sync.sh` copies them into `%USERPROFILE%`.
 ## Setup on a new machine
 
 ```powershell
-winget install LGUG2Z.komorebi LGUG2Z.whkd LGUG2Z.masir
+winget install LGUG2Z.komorebi LGUG2Z.whkd
 komorebic fetch-asc   # downloads applications.json (app-specific rules)
 ```
 
@@ -67,6 +67,6 @@ $s.WindowStyle = 7; $s.Save()
 `alt+hjkl`/arrows focus · `alt+shift+hjkl`/arrows move ·
 `alt+shift+enter` promote to master · `alt+1..5` workspace ·
 `alt+shift+1..5` send window to workspace · `alt+f` monocle ·
-`alt+shift+space` float · `alt+s` cycle layout · `alt+=`/`alt+-` resize ·
+`alt+shift+space` toggle float · `alt+s` cycle layout · `alt+=`/`alt+-` resize ·
 `alt+shift+c` reload komorebi · `alt+o` reload whkd ·
-`alt+d` launcher (PowerToys, not whkd)
+`alt+d` launcher (PowerToys Command Palette, started by komorebi-startup.ps1; not whkd)
